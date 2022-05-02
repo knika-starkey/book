@@ -54,6 +54,10 @@
           str += `<div class="image"><img src="${books[i].imageCover}" /></div>`;
           str += `<h2>${books[i].name}</h2>`;
           str += `<p>${books[i].author}</p>`;
+          if (books[i].stocked)
+            str += `<p><strong>${books[i].price}</strong></p>`;
+          else str += `<p><s>${books[i].price}</s></p>`;
+
           str += `</div>`;
         }
 
